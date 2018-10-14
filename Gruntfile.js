@@ -1,14 +1,12 @@
 module.exports = function(grunt) {
     
     grunt.initConfig({
-        // concat: {
-        //     {}
-        // }
-
         sass: {
-            dist: {
-                src: '/views/styles/sass/main.scss',
-                dest: '/views/styles/main.css'
+            build: {
+                files: [{
+                    src: '/views/styles/sass/main.scss',
+                    dest: '/views/styles/main.css'
+                }]
             }
         }
     });
@@ -16,7 +14,7 @@ module.exports = function(grunt) {
     // Load plugins here..
     
     // grunt.loadNpmTasks('grunt-contrib-concat');
-    grunt.loadNpmTasks('grunt-node-sass');
+    grunt.loadNpmTasks('grunt-sass');
 
     
 
@@ -35,5 +33,6 @@ module.exports = function(grunt) {
     // });
 
     // grunt.registerTask('all',['run','sleep']);
+    grunt.registerTask((default,[sass]));
 
 }
