@@ -17,9 +17,6 @@
   },
   "devDependencies": {
     "grunt": "^1.0.3",
-    "grunt-contrib-concat": "^1.0.1",
-    "grunt-contrib-sass": "^1.0.0",
-    "grunt-node-sass": "^1.0.1",
     "grunt-sass": "^3.0.2",
     "node-sass": "^4.9.3"
   }
