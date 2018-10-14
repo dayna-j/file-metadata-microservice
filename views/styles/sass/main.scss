@@ -6,6 +6,8 @@ html {
 
   *, *:before, *:after {
     box-sizing: inherit;
+    padding: 0;
+    margin: 0;
   }
 
   body {
@@ -14,15 +16,20 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
+    
   }
 
   #bodyWrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 99%;
-    height: 99%;
-    background-color: teal;
+    width: 100%;
+    height: 100%;
+    background-color: #020a1b;
+    background: url('https://pixabay.com/get/eb36b40b2cfd033ecd1f4204e44a449fe46ae3d01ab8144193f6c479/matrix-2354492.jpg') no-repeat center center fixed;
+    background-size: cover;
+    
+    
   }
 
   #formWrapper {
@@ -31,24 +38,38 @@ html {
     align-items: center;
     height: 75%;
     width: 75%;
-    background-color: beige;
+    // background-color: #1E3053;
   }
 
   form {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: lightcoral;
-    height: 50%;
-    width: 50%;
+    background-color: rgba(32, 36, 32, 0.911);
+    height: 80%;
+    width: 80%;
+    
+    
 
     input {
         // margin: 5px;
+        // display: block;
+        margin: 5px;
+    }
+
+    input[type='file'] {
         display: block;
+        position: relative;
+        background-color: purple;
+        // height: 20px;
     }
 
     input[type='submit'] {
-          display: block;
+        // margin: 10px;  
+        display: block;
+        position: relative;
+        // background-color: yellow;
       }
 
   }
