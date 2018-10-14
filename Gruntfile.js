@@ -4,14 +4,21 @@ module.exports = function(grunt) {
         // concat: {
         //     {}
         // }
+
+        sass: {
+            dist: {
+                src: '/views/styles/sass/main.scss',
+                dest: '/views/styles/main.css'
+            }
+        }
     });
 
     // Load plugins here..
     
     // grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-node-sass');
+
     
-    
-    // grunt.loadNpmTasks('')
 
     // Register tasks
     
