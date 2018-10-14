@@ -25,7 +25,7 @@ app.get('/', (req, res) => {
       res.sendFile(`${process.cwd()}/views/index.html`);
     });
 
-app.post('/file-size', multer({ dest: './uploads/'}).single('chooseFileButton'), function(req,res){
+app.post('/file-size', multer({ dest: './uploads/'}).single('upfile'), function(req,res){
     console.log('{size: '+req.file.size+'}');
     const fsize = req.file.size;
     const name = req.file.originalname;
@@ -33,6 +33,6 @@ app.post('/file-size', multer({ dest: './uploads/'}).single('chooseFileButton'),
         name: name,
         size: fsize
     });
-    });
+});
 
 app.listen(port, () => log(`server started on port ${port}`));
