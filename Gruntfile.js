@@ -1,12 +1,18 @@
 module.exports = function(grunt) {
-    
+
+    const sass = require('node-sass');
+
     grunt.initConfig({
+        pkg: grunt.file.readJSON('package.json'),
         sass: {
-            build: {
-                files: [{
-                    src: '/views/styles/sass/main.scss',
-                    dest: '/views/styles/main.css'
-                }]
+            options: {
+                // sourceMap: true,
+                implementation: sass,
+            },
+            dist: {
+                files: {
+                    './views/styles/main.css' : './views/styles/sass/main.scss'
+                }
             }
         }
     });
@@ -33,6 +39,6 @@ module.exports = function(grunt) {
     // });
 
     // grunt.registerTask('all',['run','sleep']);
-    grunt.registerTask((default,[sass]));
+    grunt.registerTask('default',['sass:dist']);
 
 }
