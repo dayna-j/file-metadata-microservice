@@ -4,6 +4,14 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+
+        watch: {
+            sass: {
+                files: ['./views/styles/sass/*.scss'],
+                tasks: ['sass']
+            }
+        },
+
         sass: {
             options: {
                 // sourceMap: true,
@@ -19,24 +27,11 @@ module.exports = function(grunt) {
 
     // Load plugins here..
     
-    // grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-sass');
+    grunt.loadNpmTasks('grunt-contrib-watch');
 
-    
 
     // Register tasks
-    
-    
-        
-    
-    
-    // grunt.registerTask('run', () => {
-    //     console.log('I am running');
-    // });
-
-    // grunt.registerTask('sleep', () => {
-    //     console.log('I am sleeping');
-    // });
 
     // grunt.registerTask('all',['run','sleep']);
     grunt.registerTask('default',['sass:dist']);

@@ -7,3 +7,48 @@ html {
   *, *:before, *:after {
     box-sizing: inherit;
   }
+
+  body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #bodyWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 99%;
+    height: 99%;
+    background-color: teal;
+  }
+
+  #formWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75%;
+    width: 75%;
+    background-color: beige;
+  }
+
+  form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightcoral;
+    height: 50%;
+    width: 50%;
+
+    input {
+        // margin: 5px;
+        display: block;
+    }
+
+    input[type='submit'] {
+          display: block;
+      }
+
+  }
