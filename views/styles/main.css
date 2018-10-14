@@ -15,13 +15,14 @@ body {
 
 #bodyWrapper {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
-  background-color: #020a1b;
-  background: url("https://pixabay.com/get/eb36b40b2cfd033ecd1f4204e44a449fe46ae3d01ab8144193f6c479/matrix-2354492.jpg") no-repeat center center fixed;
   background-size: cover; }
+  #bodyWrapper h1 {
+    display: block; }
 
 #formWrapper {
   display: flex;
@@ -35,15 +36,20 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(32, 36, 32, 0.911);
   height: 80%;
-  width: 80%; }
+  width: 80%;
+  border: 5px double #796868; }
   form input {
     margin: 5px; }
   form input[type='file'] {
     display: block;
     position: relative;
-    background-color: purple; }
+    height: 30px;
+    font-family: sans-serif;
+    font-size: 1em;
+    color: #684e4e; }
   form input[type='submit'] {
     display: block;
-    position: relative; }
+    position: relative;
+    height: 20px;
+    width: 100px; }
